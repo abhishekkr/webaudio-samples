@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+  <title>Drumkit Rhythm | Web Audio API</title>
+  <link rel="stylesheet" href="webaudio.css" type="text/css" media="screen" />
+  </head>
+
+  <body>
+    <div id="container">
+      <div id="wrapper">
+        <div id="content">
+          <div class="post">
+            <h2>Drumkit Rhythm</h2>
+            <p>
+              Illustrating the API's precise timing model by playing back a simple rhythm.
+            </p>
+            <p>
+              <p><button style="display: block">Play/pause</button></p>
+              <script src="webaudio.js"></script>
+              <script src="rhythm.js"></script>
+              <script>
+              var sample = new RhythmSample();
+              document.querySelector('button').addEventListener('click', function() {
+                RhythmSample.prototype.play = drumSet2;
+                sample.play();
+              });
+              </script>
+            </p>
+            <div>
+              audio samples courtesy <a href="http://ccmixter.org/files/carbonmonoxidemusic/23425">ccmixter/carbonmonoxidemusic</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
