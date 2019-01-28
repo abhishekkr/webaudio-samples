@@ -34,13 +34,18 @@
       <br>
       <br>
       <div class="mui-container mui-row">
-        <p class="mui-col-xs-12 mui-col-md-8">
-          <p><button class="mui-btn mui-btn--raised">play</button></p>
+        <p>
+          <p><button class="drum1 mui-btn mui-btn--raised">drum set 1</button></p>
+          <p><button class="drum2 mui-btn mui-btn--raised">drum set 2</button></p>
           <script src="js/webaudio.js"></script>
           <script src="js/rhythm.js"></script>
           <script>
           var sample = new RhythmSample();
-          document.querySelector('button').addEventListener('click', function() {
+          document.querySelector('.drum1').addEventListener('click', function() {
+            RhythmSample.prototype.play = drumSet1;
+            sample.play();
+          });
+          document.querySelector('.drum2').addEventListener('click', function() {
             RhythmSample.prototype.play = drumSet2;
             sample.play();
           });
@@ -53,7 +58,7 @@
     </div>
     <footer>
       <div class="mui-container mui--text-center">
-        from <a href="https://twitter.com/abionic"></a> with ♥
+        from <a href="https://twitter.com/abionic">@abionic</a> with ♥
       </div>
     </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
