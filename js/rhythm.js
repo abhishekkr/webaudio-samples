@@ -37,7 +37,7 @@ var RhythmSample = function() {
 
 function drumSet1() {
   // We'll start playing the rhythm 100 milliseconds from "now"
-  var startTime = context.currentTime + 0.100;
+  var startTime = wavContext.currentTime + 0.100;
   var tempo = 80; // BPM (beats per minute)
   var eighthNoteTime = (60 / tempo) / 2;
 
@@ -61,7 +61,7 @@ function drumSet1() {
 
 function drumSet2() {
   // We'll start playing the rhythm 100 milliseconds from "now"
-  var startTime = context.currentTime + 0.100;
+  var startTime = wavContext.currentTime + 0.100;
   var tempo = 80; // BPM (beats per minute)
   var eighthNoteTime = (60 / tempo) / 2;
 
@@ -83,4 +83,15 @@ function drumSet2() {
   }
 };
 
-//RhythmSample.prototype.play = drumSet1;
+// adding drum kit samples to buttons
+var sample = new RhythmSample();
+
+document.querySelector('.drum1').addEventListener('click', function() {
+  RhythmSample.prototype.play = drumSet1;
+  sample.play();
+});
+
+document.querySelector('.drum2').addEventListener('click', function() {
+  RhythmSample.prototype.play = drumSet2;
+  sample.play();
+});

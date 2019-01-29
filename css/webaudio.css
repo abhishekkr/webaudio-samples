@@ -1,5 +1,11 @@
 /**
  * Body CSS
+ * main content courtesy: https://www.muicss.com/docs/v1/example-layouts/responsive-side-menu
+ *
+ */
+
+/**
+ * Body CSS
  */
 html,
 body {
@@ -64,18 +70,3 @@ footer {
   border-top: 1px solid #e0e0e0;
   padding-top: 35px;
 }
-
-
-.center {
-  margin: auto;
-  width: 50%;
-  border: 3px solid green;
-  padding: 10px;
-  align-content: center;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-align-content: center;
-}
-
