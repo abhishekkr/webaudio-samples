@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>MUI Landing Page with Extras</title>
+    <title>WebAudio Samples</title>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="//cdn.muicss.com/mui-0.9.41/extra/mui-colors.min.css">
@@ -16,8 +16,7 @@
   <body>
     <header id="header">
       <div class="mui-appbar mui--z1 mui--appbar-line-height">
-        <span class="mui--text-title">WebAudio API Examples</span>
-        <span class="mui--appbar-height mui--text-right"><a href="https://github.com/abhishekkr/webaudio-samples/">@github</a></span>
+        <span class="mui--appbar-height mui--text-right"><a href="https://github.com/abhishekkr/webaudio-samples/"><span class="mui--text-title">WebAudio API Examples</span>@github</a></span>
       </div>
     </header>
     <div id="content-wrapper" class="mui--no-user-select content-with-slides" class="mui--text-center">
@@ -50,12 +49,61 @@
           <p>
             <button class="doremi mui-btn mui-btn--raised">do-re-mi</button>
             <button class="guitar_lagrima mui-btn mui-btn--raised">lagrima</button>
-            <script>
-            </script>
           </p>
         </div>
       </div> <!-- fluid -->
+      <div class="mui-container-fluid content-slide">
+        <br>
+        <span><a class="show-hide">☰</a></span>
+        <span class="mui--text-display3">Guitar Tab</span>
+        <div class="mui-container mui--align-middle content-to-hide">
+          <br>
+          <br>
+          <form class="mui-form">
+            <legend>Create Tab</legend>
+            <span>(double click on added notes to remove them)</span>
+            <div class="flex-container guitar_tabs">
+              <div class="gtab_note">G3.6:0.5</div>
+              <div class="gtab_note">B4.5:0.5</div>
+              <div class="gtab_note">B4.7:0.5</div>
+              <div class="gtab_note">B4.9:0.25</div>
+              <div class="gtab_note">x.0:0.25</div>
+              <div class="gtab_note">B4.10:0.25</div>
+              <div class="gtab_note">E4.9:0.5</div>
+              <div class="gtab_note">x.0:0.25</div>
+              <div class="gtab_note">B4.9:0.25</div>
+              <div class="gtab_note">B4.10:0.25</div>
+              <div class="gtab_note">B4.9:0.5</div>
+              <div class="gtab_note">B4.9:0.5</div>
+
+              <div class="gtab_note">G3.6:0.5</div>
+              <div class="gtab_note">B4.5:0.5</div>
+              <div class="gtab_note">B4.9:0.5</div>
+              <div class="gtab_note">B4.12:0.25</div>
+              <div class="gtab_note">B4.13:0.25</div>
+              <div class="gtab_note">E4.12:0.25</div>
+              <div class="gtab_note">B4.10:0.25</div>
+              <div class="gtab_note">B4.9:0.25</div>
+              <div class="gtab_note">B4.10:0.25</div>
+              <div class="gtab_note">B4.9:0.75</div>
+              <div class="gtab_note">B4.7:0.25</div>
+            </div>
+            <div class="mui-textfield">
+              <Select class="tab_string_select" ref={el => { this.select = el; }} name="input" defaultValue="E4">
+              </Select>
+              <Select class="tab_fret_select" ref={el => { this.select = el; }} name="input" defaultValue="0">
+              </Select>
+              <Select class="tab_time_select" ref={el => { this.select = el; }} name="input" defaultValue="0">
+              </Select>
+              <span class="tab_add mui-btn mui-btn--raised">[+]</span>
+            </div>
+            <div class="play_guitar_tabs mui-btn mui-btn--raised">[play]</div>
+          </form>
+        </div>
+      </div> <!-- fluid -->
       <script src="js/webaudio-oscillate-guitar.js"></script>
+      <script src="js/webaudio-oscillate-guitar-tab.js"></script>
+      <script src="js/webaudio-oscillate-guitar-lagrima.js"></script>
       <script src="js/webaudio-oscillate.js"></script>
       <script src="js/webaudio-wavctx.js"></script>
       <script src="js/rhythm.js"></script>
